@@ -8,14 +8,17 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
    <link href="style.css" rel="stylesheet">
+   <script src="script.js"></script>
 </head>
 
 <body>
 
-   <section>
-      <div class="container">
+   <section class="p-5">
+      <div class="container ">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
+
+               
                <div class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
@@ -25,11 +28,12 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="minus-btn-1" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="input-value" type="text" class="form-control text-center" value="0">
+                           <button id="plus-btn-1" class="btn btn-default plus-btn"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <input type="hidden" value="1200">
+                        <h5>$<span id="price">0</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,12 +47,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
-
+                           <button id="minus-btn-2" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input type="text" class="form-control text-center" value="0">
+                           <button id="plus-btn-2" class="btn btn-default plus-btn"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$59</h5>
+                        <input type="hidden" value="59">
+                        <h5>$ <span id="price">0</span>  </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -59,19 +63,19 @@
 
                      <div class="col-md-8">
                         <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
+                        <h5>5% Tax:</h5>
                         <h5>Total:</h5>
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$<span id="sub-total">0</span></h5>
+                        <h5>$<span id="tax">0</span></h5>
+                        <h5>$<span id="total">0</span></h5>
                      </div>
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="checkout" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
